@@ -10,7 +10,7 @@ process.stdin.on('data', function(chunk) {
   var buf = new Buffer(chunk, 'base64');
   var arr = new arrays.Uint8Array(buf);
   var data = inflater.append(arr, function(){});
-  process.stdout.write('data: ' + decodeUTF8(data));
+  process.stdout.write(decodeUTF8(data));
 });
 
 process.stdin.on('end', function () {
